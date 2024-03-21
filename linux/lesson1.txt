@@ -1,0 +1,20 @@
+we talked about devops in general 
+about ci/cd jenkins AWS in general - git docker  
+bitbucket github gitlab in general 
+
+commands: 
+
+pwd
+ls -ltr
+cd folder
+mkdir folder
+rm -rf folder
+rm -f file 
+chmod +x run.sh 
+touch file 
+cat file
+date 
+cat /tmp/log.txt
+cd /    
+cd 
+ 

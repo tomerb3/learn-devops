@@ -1,0 +1,35 @@
+we talked about python3 script . basic stuff 
+
+in linux we return of stuff from lesson1 
+
+ls -ltr
+-rw-r--r-- 1 baum baum    0 Mar 21 17:55 list1.txt
+
+ ---         > user permission
+    ---      > group permission
+       ---   > else permission
+
+chmod   ( binary) 
+chmod 777 file 
+chmod 657 file2
+
+binary explain: 
+
+4  2   1
+1  1   1 = 7 
+0  1   1 = 3
+1  1   0 = 6
+
+chmod 600 file   rw------- 
+
+how to use vi 
+vi     i  esc    :wq!
+
+how to use crontab : 
+
+crontab -l 
+crontab -e
+
+ * * * * * /tmp/script.sh 
+ min hour day-of-month  month  day-in-week name-script 
+

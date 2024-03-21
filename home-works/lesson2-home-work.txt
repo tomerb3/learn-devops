@@ -1,0 +1,27 @@
+
+write me linux bash script
+
+name of script  script-lesson2.sh
+
+what the script will do : 
+
+1. create folder in /tmp 
+   name of the folder  "lesson2"
+
+2. inside this folder   create empty file  file1.txt
+
+3. put in first line `date` command
+
+4. put in second line of file1.txt : your full name 
+
+5. count the lines of the file and put the number in third line 
+
+6. put the content of /etc/passwd  into the other lines of file1.txt 
+
+================ other tasks not relate to your script tasks: 
+7. create github user and login to it 
+
+8. create repository (public) 
+
+9. commit your script-lesson2.sh to this repository and send me the github repository you created with the script 
+ 
