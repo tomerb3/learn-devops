@@ -1,0 +1,8 @@
+word1 text text2
+abc   lkjl lll  Info
+world aaa 
+this is line 4
+this is line 5
+info1 infO2 info3
+aaa bbbc cccc
+ddd ddd eee 

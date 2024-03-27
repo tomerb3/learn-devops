@@ -1,0 +1,16 @@
+create bash script lesson3.sh 
+
+1. you have file info.txt in this folder 
+
+
+
+  create if section .  if number of cars that include "info" ( not case sensitive )   grep -i info  is bigger then 38  
+     then    put 2 first lines of info.txt in file result.txt 
+     else    put last 2 lines of info.txt in file result.txt 
+
+
+2. you have a1.txt file and a2.txt 
+   write me command that show in terminal only the lines (countries) that exist in a2.txt and not exist in a1.txt 
+
+
+3. show me in one line  -  the users in this linux that connected to /bin/bash ( and not /sbon/nologin ) 
