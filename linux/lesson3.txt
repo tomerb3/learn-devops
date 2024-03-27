@@ -1,0 +1,44 @@
+go over your lesson2 home-work for 10 min
+
+
+ls -a
+
+cat file with |wc -l and |wc -c        add if to it 
+cat -n file 
+
+find . -name "text"
+
+df 
+
+du 
+
+ |head and |tail 
+
+ diff file1  file2 
+
+
+sudo 
+
+sudo chown <owner> <file or dir> 
+
+ping 
+
+ps 
+
+top 
+
+wget <url> 
+
+history 
+
+sudo useradd <username> 
+
+sudo userdel <username>
+
+passwd 
+
+reboot
+
+which 
+
+alias
