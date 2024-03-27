@@ -1,35 +1,86 @@
+March 27 2024
+
 go over your lesson2 home-work for 10 min
 
+grep
 
+cat file.txt |grep abc |wc -l
+
+a=5
+[[ $a -eq 6 ]] && (echo yes ; echo === ;ls -ltr  )  || (echo no ; echo === ;cat /etc/passwd |wc -l )
+
+https://devhints.io/bash
+
+
+if [ $( echo tomer |grep tom |wc -c ) -gt 0 ];then 
+  echo yes 
+else
+  echo no 
+fi 
+
+#show without hidden 
+ls -ltr 
+
+# show hidden 
+ls -ltra
 ls -a
 
 cat file with |wc -l and |wc -c        add if to it 
+
+# with  numbers 
 cat -n file 
 
-find . -name "text"
+find .
+find . -name "lesson2-home-work.txt"
+ 
+cd ..
+cd ../../
+cd -
 
 df 
 
 du 
 
- |head and |tail 
+cp file file2 
+
+cat file |head -2 
+cat file |tail -1  
 
  diff file1  file2 
+
+sudo vi /etc/passwd
+
+id 
+
+sudo cat /etc/sudoers
+
+baum ALL=(ALL) NOPASSWD: ALL
 
 
 sudo 
 
 sudo chown <owner> <file or dir> 
 
-ping 
+https://cloudacademy.com/blog/how-dns-works/
+
+ping cnn.com 
+ping 8.8.8.8
 
 ps 
+ps -ef 
+
 
 top 
 
 wget <url> 
 
 history 
+ctrl + R 
+
+
+
+
+
 
 sudo useradd <username> 
 
