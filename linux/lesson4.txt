@@ -1,0 +1,7 @@
+April 3 2024
+
+go over your lesson3 home-work for 10 min
+
+teach ssh and scp . config .. 
+
+start talking about docker 
