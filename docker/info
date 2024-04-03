@@ -1,1 +1,40 @@
 https://stackoverflow.com/questions/56558570/copying-files-with-execute-permissions-in-docker-image
+
+
+tomerb3
+
+
+docker-compose
+docker run
+
+registry
+
+docker build . 
+dockerFile
+
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+
+FROM centos:7
+COPY CentOS-7-x86_64-DVD-2009.iso /tmp/centos.iso
+RUN mkdir /mnt/centos \
+    && mount -o loop /tmp/centos.iso /mnt/centos \
+    && yum -y install /mnt/centos/Packages/genisoimage-1.1.11-25.el7.x86_64.rpm \
+    && umount /mnt/centos \
+    && rm /tmp/centos.iso
+WORKDIR /
+CMD ["/bin/bash"]
+
+
+docker build . 
+
+docker ps -a 
+
+docker system prune --all
+
+docker images
+
+docker volumes
+
