@@ -1,16 +1,6 @@
-#!/bin/bash 
+#!/bin/bash
 
-if [ "$1" == "-v" ];then 
-  debug='true'
-else 
-  debug='false'
-fi 
- 
-if [ "$1" == "-r" ];then 
-  recursive='true'
-else 
-  recursive='false'
-fi 
+debug=''
 
 debug_text(){
     if [ "${debug}" == "true" ];then 
@@ -34,8 +24,31 @@ check_file_and_unpack(){
     fi 
 }
 
+go_over_folders_and_extract_all_files(){
+  ls -d */ |while read folder_name 
+  do 
+    (
+      cd ${folder_name}
+      pwd
+      check_file_and_unpack *
+    )
+  done 
+}
+
 for var in "$@"
 do
-    check_file_and_unpack "$var"
+  if [ "$var" == "-r" ];then 
+    if [ "$2" == "-v" ];then 
+      debug='true'
+    fi 
+    go_over_folders_and_extract_all_files
+    exit 0
+  fi 
+  
+  if [ "$var" == "-v" ];then 
+    debug='true'
+  fi 
+  check_file_and_unpack "$var"
+
 done
 
