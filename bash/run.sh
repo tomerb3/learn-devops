@@ -1,9 +1,7 @@
-#!/bin/bash -x
+#!/bin/bash
 
-echo start
+for var in "$@"
+do
+    echo "$var"
+done
 
-if [ $( echo tomeraa |grep 1tom |wc -c ) -gt 0 ];then 
-  echo yes 
-else
-  echo no 
-fi 
