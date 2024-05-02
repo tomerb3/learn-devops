@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 debug=''
 
@@ -9,19 +9,24 @@ debug_text(){
 }
 
 check_file_and_unpack(){
-    file_result=$(file $1)
+  for var2 in "$@"
+  do
+    file_result=$(file $var2)
     if [ $(echo $file_result |grep ASCII|wc -l) -gt 0 ];then 
-      debug_text "Ignoring $1"
+      debug_text "Ignoring $var2"
+    elif [ $(echo $file_result |grep empty|wc -l) -gt 0 ];then 
+      debug_text "Ignoring $var2"
     elif [ $(echo $file_result |grep "gzip compressed" |wc -l) -gt 0 ];then  
-      debug_text "Unpacking $1"
-      gunzip $1
+      debug_text "Unpacking $var2"
+      gunzip $var2
     elif [ $(echo $file_result |grep "bzip2" |wc -l) -gt 0 ];then  
-      debug_text "Unpacking $1"
-      bzip2 -d $1
+      debug_text "Unpacking $var2"
+      bzip2 -d -f $var2
     elif [ $(echo $file_result |grep "Zip archive" |wc -l) -gt 0 ];then  
-      debug_text "Unpacking $1"
-      unzip -o $1
+      debug_text "Unpacking $var2"
+      unzip -o $var2
     fi 
+  done
 }
 
 go_over_folders_and_extract_all_files(){
