@@ -1,18 +1,16 @@
 #!/bin/bash 
 
-
-# -v  helpers
-
-
 if [ "$1" == "-v" ];then 
   debug='true'
 else 
   debug='false'
 fi 
  
-
- 
-
+if [ "$1" == "-r" ];then 
+  recursive='true'
+else 
+  recursive='false'
+fi 
 
 debug_text(){
     if [ "${debug}" == "true" ];then 
@@ -34,8 +32,6 @@ check_file_and_unpack(){
       debug_text "Unpacking $1"
       unzip -o $1
     fi 
-
-
 }
 
 for var in "$@"
@@ -43,53 +39,3 @@ do
     check_file_and_unpack "$var"
 done
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-exit 0
-
-#for var in "$@"
-#do
- #   echo "$var"
-#done
-
-# ===
-# bunzip2 -z * 
-
-#  a.txt.bz2 
-
-# ===
-# gzip a.txt 
-# gunzip a.txt.gz  
-# uncompress a.txt.gz 
-# ===
-
-while getopts u:a:f: flag
-do
-    case "${flag}" in
-        u) username=${OPTARG};;
-        a) age=${OPTARG};;
-        f) fullname=${OPTARG};;
-    esac
-done
-echo "Username: $username";
-echo "Age: $age";
-echo "Full Name: $fullname";
-
-
-    #case "$1" in
-        #u) username=${OPTARG};;
-        #a) age=${OPTARG};;
-        #f) fullname=${OPTARG};;
-    #esac
